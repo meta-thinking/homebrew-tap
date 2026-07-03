@@ -10,10 +10,12 @@ cask "ai-proxy" do
   app "AI-Proxy.app"
 
   caveats <<~EOS
-    AI-Proxy is ad-hoc signed (no Apple notarization yet). Install with:
-      brew install --cask --no-quarantine heshamh96/tap/ai-proxy
-    On first launch, look for the AI-Proxy window and menu-bar icon.
-    Not affiliated with Anthropic, Google, or OpenAI. Routes requests through
-    YOUR OWN subscriptions — see the disclaimer in the app's License tab.
+    AI-Proxy is ad-hoc signed (no Apple notarization yet). If macOS blocks the
+    first launch, either right-click the app in /Applications and choose Open,
+    or run:  xattr -dr com.apple.quarantine "/Applications/AI-Proxy.app"
+
+    Look for the AI-Proxy window and the menu-bar icon. Not affiliated with
+    Anthropic, Google, or OpenAI — it routes requests through YOUR OWN
+    subscriptions (see the disclaimer in the app's License tab).
   EOS
 end
