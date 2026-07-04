@@ -1,6 +1,6 @@
 cask "ai-proxy" do
-  version "1.17.0"
-  sha256 "da99621c81a3dbaa6cdf56fba7544dced339c7f40fbdcb183bc22d7ad13377a7"
+  version "1.18.0"
+  sha256 "be579867cf983a788e18352f5172738264cf2cdc43bedea7e2c0be29a48d0833"
 
   url "https://github.com/heshamh96/homebrew-tap/releases/download/v#{version}/AI-Proxy.zip"
   name "AI-Proxy"
