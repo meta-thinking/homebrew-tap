@@ -1,21 +1,23 @@
 cask "ai-proxy" do
-  version "1.18.0"
-  sha256 "be579867cf983a788e18352f5172738264cf2cdc43bedea7e2c0be29a48d0833"
+  version "0.2.4"
+  sha256 "3ace86abcfd4d883375efa013a373db9dee6e44ee0825d610765a7eef1c5f93a"
 
-  url "https://github.com/meta-thinking/homebrew-tap/releases/download/v#{version}/AI-Proxy.zip"
+  url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/AI-Proxy_#{version}_aarch64.app.tar.gz"
   name "AI-Proxy"
-  desc "Menu-bar gateway exposing your AI subscriptions as an OpenAI-compatible API"
-  homepage "https://www.meta-thinking.net/products/ai-proxy"
+  desc "The automations gateway — your AI subscriptions as one OpenAI-compatible endpoint"
+  homepage "https://aiproxy.meta-thinking.net"
+
+  depends_on arch: :arm64
 
   app "AI-Proxy.app"
 
   caveats <<~EOS
     AI-Proxy is ad-hoc signed (no Apple notarization yet). If macOS blocks the
-    first launch, either right-click the app in /Applications and choose Open,
-    or run:  xattr -dr com.apple.quarantine "/Applications/AI-Proxy.app"
+    first launch:  xattr -dr com.apple.quarantine "/Applications/AI-Proxy.app"
 
-    Look for the AI-Proxy window and the menu-bar icon. Not affiliated with
-    Anthropic, Google, or OpenAI — it routes requests through YOUR OWN
-    subscriptions (see the disclaimer in the app's License tab).
+    Free forever: text models, your subscriptions, Ollama, one API key.
+    Pro (image/video/voice + quick configs): https://aiproxy.meta-thinking.net/pricing
+    Docs: https://aiproxy.meta-thinking.net/docs
+    (Apple Silicon only for now — Intel/Windows/Linux ship via CI.)
   EOS
 end
