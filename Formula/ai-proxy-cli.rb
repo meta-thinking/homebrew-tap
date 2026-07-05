@@ -1,12 +1,12 @@
 class AiProxyCli < Formula
   desc "Headless AI-Proxy: your AI subscriptions as one OpenAI-compatible endpoint"
   homepage "https://aiproxy.meta-thinking.net"
-  version "0.2.6"
+  version "0.2.7"
 
   depends_on arch: :arm64
 
   url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/ai-proxy-cli-darwin-arm64.tar.gz"
-  sha256 "2eaa6970f0cdb6d8be017bae1edece13e0985fbf34e006f420adae9a10dfe2a3"
+  sha256 "a7c37991540b527eaac572d754a76e1e632f56debcef20a666545f9bdf42fd61"
 
   def install
     libexec.install "ai-proxy-server", "aiproxy-adapter", "ai-proxy"
