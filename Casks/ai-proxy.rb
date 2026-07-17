@@ -29,12 +29,4 @@ cask "ai-proxy" do
     Pro (image/video/voice + quick configs): https://aiproxy.meta-thinking.net/pricing
     Docs: https://aiproxy.meta-thinking.net/docs
   EOS
-    AI-Proxy is ad-hoc signed (no Apple notarization yet). If macOS blocks the
-    first launch:  xattr -dr com.apple.quarantine "/Applications/AI-Proxy.app"
-
-    Free forever: text models, your subscriptions, Ollama, one API key.
-    Pro (image/video/voice + quick configs): https://aiproxy.meta-thinking.net/pricing
-    Docs: https://aiproxy.meta-thinking.net/docs
-    (Apple Silicon only for now — Intel/Windows/Linux ship via CI.)
-  EOS
 end
