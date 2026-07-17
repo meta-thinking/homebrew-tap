@@ -1,13 +1,18 @@
 cask "ai-proxy" do
-  version "0.3.0"
-  sha256 "37db8640997065cbad9e2ea6c97caeeceaddd2fcac93fc63deb62c48c94ef797"
+  version "0.3.1"
 
-  url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/AI-Proxy_#{version}_aarch64.app.tar.gz"
+  on_arm do
+    sha256 "fda94f0f4394b620c43adefb6c49188d26dc965b289380563ad25389c388eedc"
+    url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/AI-Proxy_#{version}_aarch64.app.tar.gz"
+  end
+  on_intel do
+    sha256 "aa61e11f8c2618d9bb9cea1688c232fd433147eb860e63392bf29d6eb5ae53d2"
+    url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/AI-Proxy_#{version}_x64.app.tar.gz"
+  end
+
   name "AI-Proxy"
   desc "The automations gateway — your AI subscriptions as one OpenAI-compatible endpoint"
   homepage "https://aiproxy.meta-thinking.net"
-
-  depends_on arch: :arm64
 
   app "AI-Proxy.app"
 
@@ -22,8 +27,6 @@ cask "ai-proxy" do
         macOS 15 (Sequoia)+: open the app once (it will be blocked), then
           System Settings -> Privacy & Security -> "Open Anyway", or run:
         xattr -dr com.apple.quarantine "/Applications/AI-Proxy.app"
-
-    Apple Silicon only (M1-M4). Intel/Windows/Linux builds ship via CI.
 
     Free forever: text models, your subscriptions, Ollama, one API key.
     Pro (image/video/voice + quick configs): https://aiproxy.meta-thinking.net/pricing
