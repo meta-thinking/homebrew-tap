@@ -1,12 +1,12 @@
 cask "ai-proxy" do
-  version "0.3.1"
+  version "0.3.2"
 
   on_arm do
-    sha256 "fda94f0f4394b620c43adefb6c49188d26dc965b289380563ad25389c388eedc"
+    sha256 "929da2cc974f046801ded8c15380d7a6d85b75d48c7be0c9f788f707df73a3a3"
     url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/AI-Proxy_#{version}_aarch64.app.tar.gz"
   end
   on_intel do
-    sha256 "aa61e11f8c2618d9bb9cea1688c232fd433147eb860e63392bf29d6eb5ae53d2"
+    sha256 "7d09a9c20d4580900a3a7dc39cdafff6e3c9ddfd8610966ec56224c2a0db4a51"
     url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/AI-Proxy_#{version}_x64.app.tar.gz"
   end
 
@@ -27,6 +27,8 @@ cask "ai-proxy" do
         macOS 15 (Sequoia)+: open the app once (it will be blocked), then
           System Settings -> Privacy & Security -> "Open Anyway", or run:
         xattr -dr com.apple.quarantine "/Applications/AI-Proxy.app"
+
+    From 0.3.2 the app checks for updates and can install them in one click.
 
     Free forever: text models, your subscriptions, Ollama, one API key.
     Pro (image/video/voice + quick configs): https://aiproxy.meta-thinking.net/pricing
