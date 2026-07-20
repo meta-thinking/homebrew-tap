@@ -1,21 +1,21 @@
 class AiProxyCli < Formula
   desc "Headless AI-Proxy: your AI subscriptions as one OpenAI-compatible endpoint"
   homepage "https://aiproxy.meta-thinking.net"
-  version "0.3.1"
+  version "0.3.2"
 
   on_macos do
     on_arm do
       url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/ai-proxy-cli-darwin-arm64.tar.gz"
-      sha256 "29728b59762e3f80d55e2678ca5075f86b809d8567cae048944c2e0391427157"
+      sha256 "91b685e2dbe1eaccefa5d743152c4bb190065fb8c457efd748c4651ce4e2d8c8"
     end
     on_intel do
       url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/ai-proxy-cli-darwin-amd64.tar.gz"
-      sha256 "7b980144ad5a3fcc48daf477247a53d4b7cd83ebb4394938fd1c7cb486d68879"
+      sha256 "d73dfc789d300f8d1d5ff9b8ea7272ac8ca1790aacc59dd265fad667af751f6d"
     end
   end
   on_linux do
     url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/ai-proxy-cli-linux-amd64.tar.gz"
-    sha256 "6af981f04e60b07940de7df775d2882587ced61d911e288c66b76ad52f190d01"
+    sha256 "1162f012e36061fdda9c473700a830ba260dd010190858a5e9e13312d8945dc9"
   end
 
   def install
