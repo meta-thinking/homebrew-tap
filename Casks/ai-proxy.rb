@@ -22,19 +22,16 @@ cask "ai-proxy" do
   ]
 
   caveats <<~EOS
-    AI-Proxy is ad-hoc signed (not yet notarized by Apple), so the FIRST launch
-    needs a one-time approval:
+    AI-Proxy is signed with a Developer ID and notarized by Apple, so it opens
+    normally — no Gatekeeper prompt, nothing to disable.
 
-      EASIEST — skip the quarantine flag at install time:
-        brew reinstall --cask --no-quarantine ai-proxy
+    The `ai-proxy` command line tool installs from the app itself:
+    open AI-Proxy -> Server -> Install CLI. (The old ai-proxy-cli formula is
+    retired: on Apple Silicon /opt/homebrew/bin precedes /usr/local/bin, so a
+    brewed copy shadowed the app's own and rewrote its engine config.)
 
-      OR after a normal install:
-        macOS 15 (Sequoia)+: open the app once (it will be blocked), then
-          System Settings -> Privacy & Security -> "Open Anyway", or run:
-        xattr -dr com.apple.quarantine "/Applications/AI-Proxy.app"
-
-    From 0.3.5 image and video models work through your agents, and generated
-    media is kept in ~/.ai-proxy/generated-content (emptied from the Server tab).
+    Generated images and clips are kept in ~/.ai-proxy/generated-content, and
+    can be emptied from the Server tab.
 
     Everything is free — sign in once to unlock one-click client configs.
     Plans: https://aiproxy.meta-thinking.net/pricing
