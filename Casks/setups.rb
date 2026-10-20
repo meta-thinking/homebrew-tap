@@ -1,5 +1,5 @@
 cask "setups" do
-  version "0.2.5"
+  version "0.2.6"
 
   # Apple Silicon only. The url/sha256 stay at the TOP LEVEL rather than inside
   # an on_arm block: Homebrew validates a cask for every arch, and an on_arm-only
@@ -12,7 +12,7 @@ cask "setups" do
   # says so with a real message instead of a validation error.
   depends_on arch: :arm64
 
-  sha256 "d0d500b5bb194a1ca0bcfdcb763885709485c30c9db0e067cc7ffaf8f27f8ee3"
+  sha256 "103698e699b8a686f017e7bdc513dc8077863f9038198523dac3740c96976f35"
   url "https://github.com/meta-thinking/homebrew-tap/releases/download/setups-v#{version}/Setups_#{version}_aarch64.app.tar.gz"
 
   name "Setups"
