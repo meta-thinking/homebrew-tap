@@ -28,12 +28,5 @@ cask "ai-hub" do
 
     The `ai-hub` command line tool installs from the app itself:
     open AI Hub -> Server -> Install CLI.
-
-    Generated images and clips are kept in ~/.ai-hub/generated-content, and
-    can be emptied from the Server tab.
-
-    Everything is free — sign in once to unlock one-click client configs.
-    Plans: https://aihub.meta-thinking.net/pricing
-    Docs: https://aihub.meta-thinking.net/docs
   EOS
 end
